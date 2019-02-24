@@ -18,8 +18,9 @@ if __name__ == '__main__':
     clone_image = source_img.copy()
     # source_img = cv2.imread('UnderExposedScene.jpg')
     # clone_image_1 = source_img.copy()
+    res = myHEQ_RGB(clone_image)
     while 1:
-        cv2.imshow('HEQ_RGB', myHEQ_RGB(clone_image))
+        cv2.imshow('HEQ_RGB', res)
         # cv2.imshow('HEQ_RGB_1', myHEQ_RGB(clone_image_1))
         k = cv2.waitKey(20) & 0xFF
         if k == 27:  # 27 -> ESC
